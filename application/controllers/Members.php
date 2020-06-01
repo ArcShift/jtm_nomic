@@ -1448,4 +1448,9 @@ class Members extends CI_Controller {
             }
         }
 	}
+    function kelola() {
+        $data= array();
+		$this->template->load(template().'/template',template().'/reseller/mod_reseller/kelola_umkm',$data);
+        
+    }
 }

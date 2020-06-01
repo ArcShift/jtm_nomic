@@ -1,82 +1,104 @@
-<div class="ps-page--single">
-<div class="ps-breadcrumb">
-    <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="<?php echo base_url(); ?>">Home</a></li>
-            <li><a href="#">Members</a></li>
-            <li><?php echo $title; ?></li>
-        </ul>
+<?php 
+//    print_r($this->session);
+?>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h2>Pendaftaran UMKM</h2>
     </div>
 </div>
-</div>
-<div class="ps-vendor-dashboard pro" style='margin-top:10px'>
-    <div class="container">
-      <div class="ps-section__content">
-        <?php 
-          echo $this->session->flashdata('message'); 
-          $this->session->unset_userdata('message');
-        ?>
-                <?php 
-                    $cek_paket = $this->db->query("SELECT * FROM rb_reseller_paket a JOIN rb_paket b ON a.id_paket=b.id_paket where a.id_reseller='".reseller($this->session->id_konsumen)."'");
-                    foreach ($cek_paket->result_array() as $rowp) {
-                      if ($rowp['status']=='Y'){
-                        $akhir  = strtotime($rowp['expire_date']); //Waktu awal
-                        $awal = time(); // Waktu sekarang atau akhir
-                        $diff  = $akhir - $awal;
-                        echo "<br><div class='alert alert-success'><strong>PENTING</strong> - Saat ini akun anda Aktif pada paket <b>$rowp[nama_paket]</b>, untuk Durasi $rowp[durasi] Hari.<br>
-                                              Dan Masa aktif Paket Akan Berakhir pada ".tgl_indo($rowp['expire_date'])." (".floor($diff / (60 * 60 * 24)) ." hari lagi).</div>";
-                      }else{
-                        echo "<br><div class='alert alert-danger'><strong>PENTING</strong> - Anda telah memilih paket <b>$rowp[nama_paket]</b>, untuk Durasi $rowp[durasi] Hari,
-                              <br>Silahkan melakukan Pembayaran Tepat <b style='color:#000; text-decoration:underline'>Rp ".rupiah($rowp['harga']+$rowp['id_reseller_paket'])."</b><hr>";
-                              $noo = 1;
-                              $rekening = $this->model_app->view('rb_rekening');
-                              foreach ($rekening->result_array() as $row){
-                                  echo "<span style='color:#000; display:block'>$noo. $row[nama_bank], <b>$row[no_rekening]</b>, A/N $row[pemilik_rekening]</span>";
-                                  $noo++;
-                              }
-                        echo "</div>";
-                      }
-                    }
-
-                    echo $this->session->flashdata('message'); 
-                    $this->session->unset_userdata('message');
-
-                    echo "<br><div class='row' style='margin-bottom:80px'>";
-                    $no = 1;
-                    foreach ($record->result_array() as $row){
-                    if ($no==1){ 
-                      $bintang = "<i class='fa fa-star fa-fw'></i>";
-                      $tombol = "warning";
-                    }elseif ($no==2){ 
-                      $bintang = "<i class='fa fa-star fa-fw'></i><i class='fa fa-star fa-fw'></i>";
-                      $tombol = "info";
-                    }elseif ($no==3){ 
-                      $bintang = "<i class='fa fa-star fa-fw'></i><i class='fa fa-star fa-fw'></i><i class='fa fa-star fa-fw'></i>";
-                      $tombol = "success";
-                    }
-                    echo "<div class='col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12' style='border-right: 1px solid #e3e3e3; border-left: 1px solid #e3e3e3;'>
-                            <h3 class='mb-10 text-center'>$row[nama_paket]</h3>
-                            <center>
-                            $row[judul]<br><br>
-                            <div class='price-block'>
-                            <div class='price-block-wrapper'>
-                              <div class='currency'>Rp.</div>
-                              <div class='harga'>".rupiah($row['harga'])."</div>
-                              <div class='waktu_block'>
-                                <div class='waktu'>$row[durasi]/hari</div>
-                              </div>
-                            </div>
-                            </div><br>
-                            <a style='padding:7px 20px; font-size:16px; color:#fff' class='btn btn-$tombol btn-lg'  onclick=\"return confirm('Apa anda yakin untuk pilih paket ".$row['nama_paket']."?')\" href='".base_url().$this->uri->segment(1)."/upgrade?paket=$row[id_paket]'>$bintang Pilih Sekarang</a>
-                            </center><hr style='margin-top:5px; margin-bottom:10px'>
-                            ".nl2br($row['keterangan'])."
-                          </div>
-                          
-                          <br class='visible-xs'><br class='visible-xs'>";
-                      $no++;
-                    }
-                  ?>
-              </div>
-        </div>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <form action="post">
+            <div class="row">
+                <label class="col-sm-3 col-form-label">Nama UMKM</label>
+                <div class="col-sm-9">
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-3 col-form-label">Alamat</label>
+                <div class="col-sm-9">
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-3 col-form-label">No Telp</label>
+                <div class="col-sm-9">
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-3 col-form-label">Legalitas</label>
+                <div class="col-sm-9">:</div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label"></label>
+                <label class="col-sm-2 col-form-label">Siup</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label"></label>
+                <label class="col-sm-2 col-form-label">Akte</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label"></label>
+                <label class="col-sm-2 col-form-label">TDP</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label"></label>
+                <label class="col-sm-2 col-form-label">Domisili</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label"></label>
+                <label class="col-sm-2 col-form-label">Lainnya</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-3 col-form-label">Bidang</label>
+                <div class="col-sm-9">
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-3 col-form-label">Produk yg dihasilkan</label>
+                <div class="col-sm-9">
+                    <input class="form-control select-two">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-3 col-form-label">Bahan baku yang dibutuhkan</label>
+                <div class="col-sm-9">
+                    <input class="form-control select-two">
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <label class="col-sm-9 col-form-label"></label>
+                <div class="col-sm-3">
+                    <button class='ps-btn btn-block'>Simpan</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
+<script>
+//    $(".select-two").select2({
+//        tags: true,
+//        tokenSeparators: [',', ' ']
+//    });
+</script>

@@ -1,3 +1,6 @@
+<?php 
+$jenis =$this->session->umkm == 'Y'?'UMKM':'Toko';
+?>
 <div class="ps-page--single">
     <div class="ps-breadcrumb">
         <div class="container">
@@ -18,8 +21,8 @@
             $row = $this->db->query("SELECT * FROM rb_konsumen where id_konsumen='".$this->session->id_konsumen."'")->row_array();
             if (trim($rows['foto'])==''){ $foto_user = 'toko.jpg'; }else{ $foto_user = $rows['foto']; } 
             echo "<img class='img-thumbnail' style='width:100%' src='".base_url()."asset/foto_user/$foto_user'>
-            <a href='".base_url()."members/edit_profil_toko/".reseller($this->session->id_konsumen)."' class='ps-btn btn-block'><center><i class='icon-pen'></i> Edit Informasi Toko</center></a>
-            <a href='".base_url()."produk/produk_reseller/".reseller($this->session->id_konsumen)."' class='ps-btn ps-btn--black btn-block'><center>Kunjungi Toko</center></a>
+            <a href='".base_url()."members/edit_profil_toko/".reseller($this->session->id_konsumen)."' class='ps-btn btn-block'><center><i class='icon-pen'></i> Edit Informasi $jenis</center></a>
+            <a href='".base_url()."produk/produk_reseller/".reseller($this->session->id_konsumen)."' class='ps-btn ps-btn--black btn-block'><center>Kunjungi $jenis</center></a>
           <div style='clear:both'><br></div>";
           ?>
         </div>
@@ -27,8 +30,8 @@
         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 ">
             <figure class="ps-block--vendor-status biodata">
             <?php 
-              echo "<p style='font-size:17px'>Hai <b>$row[nama_lengkap]</b>, selamat datang di halaman Informasi Toko anda! <br>
-                                              Pastikan data toko anda sudah benar dan lengkap untuk kemudahan dalam bertransaksi.</p><br>
+              echo "<p style='font-size:17px'>Hai <b>$row[nama_lengkap]</b>, selamat datang di halaman Informasi $jenis anda! <br>
+                                              Pastikan data $jenis anda sudah benar dan lengkap untuk kemudahan dalam bertransaksi.</p><br>
 
               <div class='form-group row' style='margin-bottom:5px'>
               <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Nama Reseller</b></label>
@@ -52,7 +55,7 @@
               </div>
               
               <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Kontak Toko</b></label>
+              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Kontak $jenis</b></label>
                 <div class='col-sm-9'>
                   $rows[no_telpon]
                 </div>
@@ -66,7 +69,7 @@
               </div>
               
               <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Status Toko</b></label>
+              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Status $jenis</b></label>
                 <div class='col-sm-9'>";
                   $cek_paket = $this->db->query("SELECT * FROM rb_reseller_paket a JOIN rb_paket b ON a.id_paket=b.id_paket where a.id_reseller='".reseller($this->session->id_konsumen)."'");
                   if ($cek_paket->num_rows()>=1){
@@ -93,7 +96,7 @@
                       }
                     }
                   }else{
-                    echo "<span style='color:red'>Reseller / Toko Free</span>";
+                    echo "<span style='color:red'>Reseller / $jenis Free</span>";
                   }
 
                  

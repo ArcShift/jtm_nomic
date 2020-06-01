@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>template/<?php echo template(); ?>/css/custom.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/asset/admin/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/summernote/summernote-bs4.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <script type="text/javascript" src="<?php echo base_url(); ?>template/<?php echo template(); ?>/js/jquery-3.2.1.min.js"></script>
     <script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -326,15 +327,19 @@
                                 if (reseller($this->session->id_konsumen)!=''){
                             ?>
                             <li>
-                                <div class="ps-dropdown"><a href="#"><i class='icon-bag'></i> Menu Toko</a>
+                                <div class="ps-dropdown"><a href="#"><i class='icon-bag'></i> Menu <?php echo $this->session->umkm == 'Y'?'UMKM':'Toko'; ?></a>
                                     <ul class="ps-dropdown-menu">
-                                        <li><a href="<?php echo base_url(); ?>members/profil_toko">Pengaturan Toko</a></li>
+                                        <li><a href="<?php echo base_url(); ?>members/profil_toko">Pengaturan <?php echo $this->session->umkm == 'Y'?'UMKM':'Toko'; ?></a></li>
                                         <li><a href="<?php echo base_url(); ?>members/produk">Daftar Produk</a></li>
                                         <li><a href="<?php echo base_url(); ?>members/alamat_cod">Alamat COD</a></li>
                                         <li><a href="<?php echo base_url(); ?>members/pembelian">Orders Pusat</a></li>
                                         <li><a href="<?php echo base_url(); ?>members/penjualan">Orders Masuk</a></li>
                                         <li><a href="<?php echo base_url(); ?>members/withdraw">Tarik Dana</a></li>
-                                        <li><a href="<?php echo base_url(); ?>members/upgrade"><i class="fa fa-star text-yellow"></i> <span class="blink_me">Upgrade Toko</span></a></li>
+                                        <?php if($this->session->umkm == 'Y'){ ?>
+                                            <li><a href="<?php echo base_url(); ?>members/kelola">Kelola UMKM</a></li>
+                                        <?php }else{ ?>
+                                            <li><a href="<?php echo base_url(); ?>members/upgrade"><i class="fa fa-star text-yellow"></i> <span class="blink_me">Upgrade UMKM</span></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </li>
@@ -597,7 +602,9 @@
     <!-- DataTables -->
     <script src="<?php echo base_url(); ?>asset/admin/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url(); ?>asset/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
-
+    <!--OTHER-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    
     <script src="<?php echo base_url(); ?>template/<?php echo template(); ?>/js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxflHHc5FlDVI-J71pO7hM1QJNW1dRp4U&amp;region=GB"></script>
     <script type="text/javascript">

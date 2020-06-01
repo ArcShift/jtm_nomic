@@ -38,7 +38,7 @@
         </div>
         <?php } ?>
         <div class="ps-footer__copyright">
-            <p>© <?php echo date('Y'); ?> Tajalapak. Hak Cipta Terpelihara PT. Tajalapak Indonesia</p>
+            <p>© <?php echo date('Y'); ?> JatimNomics. Hak Cipta Terpelihara PT. Delta Sinergi Prima</p>
         </div>
     </div>
 </footer>

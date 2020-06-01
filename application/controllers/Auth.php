@@ -38,7 +38,8 @@ class Auth extends CI_Controller {
 								'tanggal_daftar'=>date('Y-m-d H:i:s'));
 					$this->model_app->insert('rb_konsumen',$data);
 					$id = $this->db->insert_id();
-					$this->session->set_userdata(array('id_konsumen'=>$id, 'level'=>'konsumen'));
+                    $this->set_session($id);
+//					$this->session->set_userdata(array('id_konsumen'=>$id, 'level'=>'konsumen'));
 
 					$tgl_kirim = date("d-m-Y H:i:s");
 					$iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_array();
@@ -90,7 +91,8 @@ class Auth extends CI_Controller {
 
 			$rows = $this->db->query("SELECT * FROM rb_konsumen where email='$fbUser[email]' ORDER BY id_konsumen DESC LIMIT 1")->row_array();
 			if ($rows['id_konsumen']!=''){
-				$this->session->set_userdata(array('id_konsumen'=>$rows['id_konsumen'], 'level'=>'konsumen'));
+                $this->set_session($rows['id_konsumen']);
+//				$this->session->set_userdata(array('id_konsumen'=>$rows['id_konsumen'], 'level'=>'konsumen'));
 				redirect('members/profile');
 			}else{
     			if ($this->session->id_konsumen!=''){
@@ -130,7 +132,7 @@ class Auth extends CI_Controller {
 
 				$rows = $this->db->query("SELECT * FROM rb_konsumen where email='$gpInfo[email]' ORDER BY id_konsumen DESC LIMIT 1")->row_array();
 				if ($rows['id_konsumen']!=''){
-					$this->session->set_userdata(array('id_konsumen'=>$rows['id_konsumen'], 'level'=>'konsumen'));
+                    $this->set_session($rows['id_konsumen']);                    
 				    redirect('members/profile');
 				}else{
 					if ($this->session->id_konsumen!=''){
@@ -163,7 +165,8 @@ class Auth extends CI_Controller {
 			    $row = $cek->row_array();
 			    $total = $cek->num_rows();
 				if ($total > 0){
-					$this->session->set_userdata(array('id_konsumen'=>$row['id_konsumen'], 'level'=>'konsumen'));
+                    $this->set_session($row['id_konsumen']);
+//					$this->session->set_userdata(array('id_konsumen'=>$row['id_konsumen'], 'level'=>'konsumen'));
 					/*if ($this->session->idp!=''){
 						$data = array('kode_transaksi'=>$this->session->idp,
 			        			  'id_pembeli'=>$row['id_konsumen'],
@@ -251,7 +254,8 @@ class Auth extends CI_Controller {
 					$password = hash("sha512", md5(strip_tags($this->input->post('pass'))));
 					$this->db->query("UPDATE rb_konsumen set password='$password' where password='".cetak($ex[0])."' AND id_konsumen='".cetak($ex[1])."'");
 					$row = $cek->row_array();
-					$this->session->set_userdata(array('id_konsumen'=>$row['id_konsumen'], 'level'=>'konsumen'));
+                    $this->set_session($row['id_konsumen']);
+//					$this->session->set_userdata(array('id_konsumen'=>$row['id_konsumen'], 'level'=>'konsumen'));
 					if ($this->session->idp!=''){
 						$data = array('kode_transaksi'=>$this->session->idp,
 			        			  'id_pembeli'=>$row['id_konsumen'],
@@ -299,4 +303,17 @@ class Auth extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('main');
 	}
+    private function set_session($id_konsumen) {
+        $this->db->select('k.id_konsumen, rp.status AS umkm');
+        $this->db->where('k.id_konsumen', $id_konsumen);
+        $this->db->join('rb_reseller r','r.id_konsumen = k.id_konsumen', 'LEFT');
+        $this->db->join('rb_reseller_paket rp','rp.id_reseller = r.id_reseller', 'LEFT');
+        $rs=$this->db->get('rb_konsumen k')->row_array();
+//        if($row['umkm']=='Y'){
+//            $rs['level']= 'UMKM';
+//        }else{
+//            $rs['level']= 'Toko';
+//        }
+		$this->session->set_userdata(array('id_konsumen'=>$rs['id_konsumen'], 'level'=>'konsumen', 'umkm'=>$rs['umkm']));
+    }
 }
