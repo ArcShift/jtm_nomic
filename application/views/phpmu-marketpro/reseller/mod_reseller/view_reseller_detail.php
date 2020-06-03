@@ -34,7 +34,7 @@ $jenis =$this->session->umkm == 'Y'?'UMKM':'Toko';
                                               Pastikan data $jenis anda sudah benar dan lengkap untuk kemudahan dalam bertransaksi.</p><br>
 
               <div class='form-group row' style='margin-bottom:5px'>
-              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Nama Reseller</b></label>
+              <label class='col-sm-3 col-form-label' style='margin-bottom:1px'>Nama UMKM</b></label>
                 <div class='col-sm-9'>
                   $rows[nama_reseller]
                 </div>
