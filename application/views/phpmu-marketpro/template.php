@@ -831,6 +831,20 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-</div>   
+<!--ADDICTIONAL SCRIPT-->
+<script>
+var nav= $('.navigation__extra').find('a');
+var e_com= true;
+for(var n of nav){
+    if($(n).attr('href').indexOf(window.location.href)>=0){
+        e_com = false;
+        $(n).addClass('text-danger font-weight-bold');
+    }
+}
+if (e_com){
+    $(nav[1]).addClass('text-danger font-weight-bold');
+}
+</script>
+</div>
 </body>
 </html>
