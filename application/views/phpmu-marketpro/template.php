@@ -836,7 +836,8 @@ s0.parentNode.insertBefore(s1,s0);
 var nav= $('.navigation__extra').find('a');
 var e_com= true;
 for(var n of nav){
-    if($(n).attr('href').indexOf(window.location.href)>=0){
+    console.log($(n).attr('href').indexOf(window.location.href));
+    if(window.location.href.indexOf($(n).attr('href'))>=0){
         e_com = false;
         $(n).addClass('text-danger font-weight-bold');
     }

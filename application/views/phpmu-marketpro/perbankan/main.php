@@ -20,7 +20,7 @@
         <div class="tab-pane fade show active" id="tab-profil-bank">
             <div class="row m-3">
                 <div class="col-3">
-                    <img class="img-thumbnail" style="width:100%" src="https://localhost/jatimnomic/asset/foto_user/blank.png">
+                    <img class="img-thumbnail" style="width:100%" src="https://pbs.twimg.com/profile_images/829865693185138688/D1y2Ciyn_400x400.jpg">
                     <a href="https://localhost/jatimnomic/members/edit_profile" class="ps-btn btn-block">
                         <center><i class="icon-pen"></i> Edit Data</center>
                     </a>
@@ -61,29 +61,42 @@
                     <tr>
                         <th>Program</th>
                         <th>Limit</th>
+                        <th class="col-8">Keterangan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Kredit Multiguna</td>
-                        <td>500 jt</td>
+                        <td>KUR Mikro</td>
+                        <td>25jt</td>
+                        <td>Dengan limit kredit maksimal sampai dengan Rp 25 juta per debitur dan jangka waktu maksimal 2 tahun.</td>
                         <td>
                             <button class="btn btn-primary fa fa-edit"></button>
                             <button class="btn btn-danger fa fa-trash"></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Kredit Mikro</td>
-                        <td>50 jt</td>
+                        <td>KUR Ritel</td>
+                        <td>200jt</td>
+                        <td>Dengan limit kredit di atas Rp 25 juta sampai dengan maksimal Rp 200 juta per debitur, dan jangka waktu maksimal 3 tahun untuk kredit modal kerja dan 5 tahun untuk kredit investasi.</td>
                         <td>
                             <button class="btn btn-primary fa fa-edit"></button>
                             <button class="btn btn-danger fa fa-trash"></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Kredit Serbaguna</td>
-                        <td>150 jt</td>
+                        <td>KUR Penempatan TKI</td>
+                        <td>25jt</td>
+                        <td>Dengan limit kredit maksimal sampai dengan Rp 25 juta per debitur dengan jangka waktu disesuaikan dengan masa kontrak kerja atau maksimal 12 bulan.</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-edit"></button>
+                            <button class="btn btn-danger fa fa-trash"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>KUR Khusus</td>
+                        <td>500jt</td>
+                        <td>Dengan limit di atas Rp 25 juta sampai dengan Rp 500 juta diberikan kepada kelompok yang dikelola secara bersama dalam bentuk cluster dengan menggunakan Mitra Usaha untuk komoditas perkebunan rakyat dan peternakan rakyat serta perikanan rakyat.</td>
                         <td>
                             <button class="btn btn-primary fa fa-edit"></button>
                             <button class="btn btn-danger fa fa-trash"></button>
@@ -92,8 +105,123 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane fade" id="tab-daftar-pengajuan-pinjaman">-</div>
-        <div class="tab-pane fade" id="tab-statistik-penjualan">-</div>
-        <div class="tab-pane fade" id="tab-statistik-produksi-umkm">-</div>
+        <div class="tab-pane fade" id="tab-daftar-pengajuan-pinjaman">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>UMKM</th>
+                        <th>Tgl Pengajuan</th>
+                        <th>jumlah kredit</th>
+                        <th>Status</th>
+                        <th</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desa Penjaringan</td>
+                        <td>09-06-2020</td>
+                        <td>8.000.000</td>
+                        <td>Sedang diproses</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suka Maju</td>
+                        <td>26-05-2020</td>
+                        <td>3.000.000</td>
+                        <td>Aktif</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kurnia Sejahtera</td>
+                        <td>17-12-2019</td>
+                        <td>10.000.000</td>
+                        <td>Lunas</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="tab-statistik-penjualan">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>UMKM</th>
+                        <th>Produk terjual</th>
+                        <th>Produk terjual bulan ini</th>
+                        <th>detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desa Penjaringan</td>
+                        <td>2874</td>
+                        <td>95</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suka Maju</td>
+                        <td>5402</td>
+                        <td>173</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kurnia Sejahtera</td>
+                        <td>3693</td>
+                        <td>258</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="tab-statistik-produksi-umkm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>UMKM</th>
+                        <th>Total produk</th>
+                        <th>Sisa Produk</th>
+                        <th>detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desa Penjaringan</td>
+                        <td>3926</td>
+                        <td>594</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suka Maju</td>
+                        <td>8674</td>
+                        <td>467</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kurnia Sejahtera</td>
+                        <td>5382</td>
+                        <td>869</td>
+                        <td>
+                            <button class="btn btn-primary fa fa-search"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

@@ -72,7 +72,8 @@ $route = array(
     'auth' => 'auth',
     'members' => 'members',
     'reseller' => 'reseller',
-    'perbankan' => 'perbankan'
+    'perbankan' => 'perbankan',
+    'umkm' => 'umkm',
 );
 
 $route['(:any)'] = 'news/$1/$2';
