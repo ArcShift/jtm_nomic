@@ -12,42 +12,38 @@
             <option>Bulan ini</option>
         </select>
     </div>
-    <div class="col-4">
-        <button class="btn btn-primary fa fa-plus mt-3" title="Tambah"></button>
-    </div>
 </div>
 <table class="table">
     <thead>
         <tr>
-            <th>Nama</th>
+            <th>Bahan</th>
             <th>Jumlah</th>
             <th>Satuan</th>
-            <th>Harga</th>
-            <!--<th>Total Harga</th>-->
             <th>Tanggal</th>
+            <th>Produk</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Gula</td>
-            <td>1</td>
-            <td>kg</td>
-            <td>Rp. 15.000</td>
+            <td>20</td>
+            <td>gr</td>
             <td>04-12-2020</td>
+            <td>Es Kopi Susu</td>
         </tr>
         <tr>
             <td>Susu</td>
-            <td>1</td>
+            <td>15</td>
             <td>kg</td>
-            <td>Rp. 10.000</td>
             <td>04-12-2020</td>
+            <td>Es Kepal Milo</td>
         </tr>
         <tr>
             <td>Kopi</td>
-            <td>1</td>
+            <td>10</td>
             <td>kg</td>
-            <td>Rp. 9.000</td>
             <td>04-12-2020</td>
+            <td>Es Kopi Susu</td>
         </tr>
     </tbody>
 </table>

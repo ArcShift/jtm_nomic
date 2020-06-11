@@ -23,19 +23,25 @@
                     <a class="nav-link bg-success" href="<?php echo base_url('umkm/pembelian_bahan_baku') ?>">Pembelian Bahan Baku</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-success" href="#tab-statistik-produksi">Statistik Produksi</a>
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/stok_bahan_baku') ?>">Stok Bahan Baku</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-success" href="#tab-statistik-penjualan">Statistik Penjualan</a>
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/pemakaian_bahan') ?>">Pemakaian Bahan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-success" href="#tab-keuangan-sederhana">Keuangan Sederhana</a>
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/stok_produk') ?>">Stok Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-success" href="#tab-bursa-pinjaman-modal">Bursa Pinjaman Modal</a>
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/biaya_operasional') ?>">Biaya Operasional</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-success" href="#tab-daftar-pengajuan-pinjaman">Daftar Pengajuan Pinjaman</a>
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/penjualan') ?>">Penjualan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/keuangan_sederhana') ?>">Keuangan Sederhana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/bursa_pinjaman_modal') ?>">Bursa Pinjaman Modal</a>
                 </li>
             </ul>
         </div>
