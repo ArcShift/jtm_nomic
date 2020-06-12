@@ -21,33 +21,66 @@
             <th>Jenis</th>
             <th>Biaya</th>
             <th>Periode</th>
-            <th>Keterangan</th>
+            <th class="col-2">Keterangan</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th>04-12-2020</th>
-            <th>Pulsa Kantor</th>
-            <th>Bulanan</th>
-            <th>Rp. 500.000</th>
-            <th>1 Mei - 1 Juni 2020</th>
-            <th></th>
+            <td>04-12-2020</td>
+            <td>Pulsa Kantor</td>
+            <td>Bulanan</td>
+            <td>Rp. 500.000</td>
+            <td>1 Mei - 1 Juni 2020</td>
+            <td></td>
         </tr>
         <tr>
-            <th>04-12-2020</th>
-            <th>Listrik</th>
-            <th>Bulanan</th>
-            <th>Rp. 500.000</th>
-            <th>1 Mei - 1 Juni 2020</th>
-            <th></th>
+            <td>04-12-2020</td>
+            <td>Listrik</td>
+            <td>Bulanan</td>
+            <td>Rp. 500.000</td>
+            <td>1 Mei - 1 Juni 2020</td>
+            <td></td>
         </tr>
         <tr>
-            <th>04-12-2020</th>
-            <th>Solar Jenset</th>
-            <th>Harian</th>
-            <th>Rp. 100.000</th>
-            <th>2 Juni - 3 Juni 2020</th>
-            <th></th>
+            <td>04-12-2020</td>
+            <td>Solar Jenset</td>
+            <td>Harian</td>
+            <td>Rp. 100.000</td>
+            <td>2 Juni - 3 Juni 2020</td>
+            <td>Listrik Kantor Mati</td>
         </tr>
     </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">Total</th>
+            <th>Rp. 200.000</th>
+        </tr>
+    </tfoot>
 </table>
+<canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label: 'Biaya Operasional',
+                    borderColor: 'rgb(25, 25, 255)',
+                    backgroundColor: 'rgba(25, 25, 255, 0)',
+                    data: [100000, 200000, 300000, 150000, 250000, 350000, 200000]
+                }
+            ]
+        },
+        options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                }
+            }]
+        }
+        }
+    });
+</script>

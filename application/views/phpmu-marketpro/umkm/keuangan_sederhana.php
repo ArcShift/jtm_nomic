@@ -30,11 +30,45 @@
     </thead>
     <tbody>
         <tr>
-            <th>Es Kopi</th>
-            <th>Rp. 31.900</th>
-            <th>Rp. 20.000</th>
-            <th>Rp. 190.000</th>
-            <th>Rp. 138.100</th>
+            <td>Es Kopi Susu</td>
+            <td>Rp. 31.900</td>
+            <td>Rp. 20.000</td>
+            <td>Rp. 190.000</td>
+            <td>Rp. 138.100</td>
+        </tr>
+        <tr>
+            <td>Es Kepal Milo</td>
+            <td>Rp. 35.800</td>
+            <td>Rp. 20.000</td>
+            <td>Rp. 470.000</td>
+            <td>Rp. 348.000</td>
         </tr>
     </tbody>
 </table>
+<canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label: 'Total Laba',
+                    borderColor: 'rgb(25, 25, 255)',
+                    backgroundColor: 'rgba(25, 25, 255, 0)',
+                    data: [1020000, 1220000, 1530000, 1280000, 1140000, 1260000, 1390000]
+                },
+            ]
+        },
+        options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                }
+            }]
+        }
+        }
+    });
+</script>

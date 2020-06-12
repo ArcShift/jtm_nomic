@@ -17,7 +17,8 @@
     <thead>
         <tr>
             <th>Bahan</th>
-            <th>Jumlah</th>
+            <th>Pemakaian</th>
+            <th>Sisa</th>
             <th>Satuan</th>
             <th>Tanggal</th>
             <th>Produk</th>
@@ -27,6 +28,7 @@
         <tr>
             <td>Gula</td>
             <td>20</td>
+            <td>5</td>
             <td>gr</td>
             <td>04-12-2020</td>
             <td>Es Kopi Susu</td>
@@ -34,6 +36,7 @@
         <tr>
             <td>Susu</td>
             <td>15</td>
+            <td>2</td>
             <td>kg</td>
             <td>04-12-2020</td>
             <td>Es Kepal Milo</td>
@@ -41,6 +44,7 @@
         <tr>
             <td>Kopi</td>
             <td>10</td>
+            <td>0</td>
             <td>kg</td>
             <td>04-12-2020</td>
             <td>Es Kopi Susu</td>

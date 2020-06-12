@@ -32,13 +32,55 @@
     </thead>
     <tbody>
         <tr>
-            <th>Es Kopi</th>
-            <th>7</th>
-            <th>15</th>
-            <th>Rp. 100.000</th>
-            <th>Rp. 8.000</th>
-            <th>Rp. 70.000</th>
-            <th>Rp. 120.000</th>
+            <td>Es Kopi Susu</td>
+            <td>7</td>
+            <td>15</td>
+            <td>Rp. 3.500</td>
+            <td>Rp. 3.300</td>
+            <td>Rp. 24.500</td>
+            <td>Rp. 49.500</td>
+        </tr>
+        <tr>
+            <td>Es Kepal Milo</td>
+            <td>8</td>
+            <td>12</td>
+            <td>Rp. 7.000</td>
+            <td>Rp. 6.500</td>
+            <td>Rp. 56.000</td>
+            <td>Rp. 78.000</td>
         </tr>
     </tbody>
 </table>
+<canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label: 'Offline',
+                    borderColor: 'rgb(25, 25, 255)',
+                    backgroundColor: 'rgba(25, 25, 255, 0)',
+                    data: [450000, 540000, 690000, 710000, 420000, 570000, 640000]
+                },
+                {
+                    label: 'Online',
+                    borderColor: 'rgb(25, 255, 25)',
+                    backgroundColor: 'rgba(25, 25, 255, 0)',
+                    data: [570000, 680000, 840000, 570000, 720000, 690000, 750000]
+                },
+            ]
+        },
+        options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                }
+            }]
+        }
+        }
+    });
+</script>

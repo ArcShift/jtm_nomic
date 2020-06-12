@@ -23,30 +23,33 @@
             <th>Jumlah</th>
             <th>Satuan</th>
             <th>Harga</th>
-            <!--<th>Total Harga</th>-->
+            <th>Total Harga</th>
             <th>Tanggal</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Gula</td>
-            <td>1</td>
+            <td>2</td>
             <td>kg</td>
             <td>Rp. 15.000</td>
+            <td>Rp. 30.000</td>
             <td>04-12-2020</td>
         </tr>
         <tr>
             <td>Susu</td>
-            <td>1</td>
+            <td>5</td>
             <td>kg</td>
             <td>Rp. 10.000</td>
+            <td>Rp. 50.000</td>
             <td>04-12-2020</td>
         </tr>
         <tr>
             <td>Kopi</td>
-            <td>1</td>
+            <td>2</td>
             <td>kg</td>
             <td>Rp. 9.000</td>
+            <td>Rp. 18.000</td>
             <td>04-12-2020</td>
         </tr>
     </tbody>

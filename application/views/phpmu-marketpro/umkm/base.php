@@ -1,14 +1,5 @@
-<div class="ps-page--single">
-    <div class="ps-breadcrumb">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li><a href="#">Members</a></li>
-                <li><?php echo $title; ?></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 <div class='col-11 notif ml-50 mt-3'>
     <div class="row">
         <div class="col-3">
@@ -29,7 +20,7 @@
                     <a class="nav-link bg-success" href="<?php echo base_url('umkm/pemakaian_bahan') ?>">Pemakaian Bahan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/stok_produk') ?>">Stok Produk</a>
+                    <a class="nav-link bg-success" href="<?php echo base_url('umkm/stok_produk') ?>">Manajemen Stok Produk</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link bg-success" href="<?php echo base_url('umkm/biaya_operasional') ?>">Biaya Operasional</a>
@@ -51,6 +42,7 @@
     </div>
 </div>
 <script>
+    $('th').addClass('font-weight-bold');
     var nav = $('.nav-link.bg-success');
     for (var n of nav) {
         console.log($(n).attr('href').indexOf(window.location.href));
