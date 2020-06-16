@@ -1,18 +1,33 @@
-<div class="row mb-3">
-    <div class="col-2">
-        <label class="form-label mt-3">
-            Filter
-        </label>
-    </div>
-    <div class="col-6">
-        <select class="form-control">
-            <option>Semua</option>
-            <option>Hari ini</option>
-            <option>Minggu ini</option>
-            <option>Bulan ini</option>
-        </select>
+<!--SUMMARY-->
+<div class="row m-3">
+    <div class="col-sm-12 text-right">
+        <span class="badge badge-primary">Produk: 2</span>
+        <span class="badge badge-primary">Penjualan: Rp. 660.000</span>
+        <span class="badge badge-primary">Keuntungan: Rp. 486.100‬</span>
     </div>
 </div>
+<!--SEACRHING-->
+<form>
+    <div class="row m-3">
+        <div class="col-sm-3">
+            <select class="form-control">
+                <option>Semua</option>
+                <option>Hari ini</option>
+                <option>Minggu ini</option>
+                <option>Bulan ini</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" placeholder="Produk"/>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+        </div>
+    </div>
+</form>
+<!--CHART-->
+<canvas class="m-3" id="myChart"></canvas>
+<!--DATA-->
 <table class="table">
     <thead>
         <tr>
@@ -45,7 +60,6 @@
         </tr>
     </tbody>
 </table>
-<canvas id="myChart"></canvas>
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {

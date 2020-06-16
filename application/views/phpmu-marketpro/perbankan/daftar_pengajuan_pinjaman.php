@@ -1,17 +1,31 @@
+<!--SUMMARY-->
 <div class="row m-3">
-    <div class="col-3">
-        <input class="form-control" placeholder="Tanggal"/>
+    <div class="col-sm-12 text-right">
+        <span class="badge badge-primary">UMKM: 3</span>
     </div>
-    <div class="col-3">
-        <input class="form-control" placeholder="Status"/>
-    </div>
-    <div class="col-3">
+</div>
+<!--SEACRHING-->
+<div class="row m-3">
+    <div class="col-2">
         <input class="form-control" placeholder="Nama UMKM"/>
     </div>
     <div class="col-2">
-        <button class="m-3 btn btn-primary fa fa-plus" title="Tambah"></button>
+        <select class="form-control">
+            <option>-- status --</option>
+            <option>Menunggu</option>
+            <option>Diterima</option>
+            <option>Ditolak</option>
+        </select>
+    </div>
+    <div class="col-2">
+        <input class="form-control" type="date"/>
+    </div>
+    <div class="col-6">
+        <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+        <button class="btn btn-primary mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
     </div>
 </div>
+<!--DATA-->
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +34,7 @@
             <th>Tgl Pengajuan</th>
             <th>jumlah kredit</th>
             <th>Status</th>
-            <th</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -33,9 +47,9 @@
                 <span class="badge badge-primary">MENUNGGU</span>
             </td>
             <td>
-                <button class="btn btn-primary fa fa-search"></button>
-                <button class="btn btn-success fa fa-calendar-check-o"></button>
-                <button class="btn btn-danger fa fa-calendar-times-o"></button>
+                <button class="btn btn-primary fa fa-search" title="Detail"></button>
+                <button class="btn btn-success fa fa-calendar-check-o" title="Terima"></button>
+                <button class="btn btn-danger fa fa-calendar-times-o" title="Tolak"></button>
             </td>
         </tr>
         <tr>
@@ -47,7 +61,7 @@
                 <span class="badge badge-success">DITERIMA</span>
             </td>
             <td>
-                <button class="btn btn-primary fa fa-search"></button>
+                <button class="btn btn-primary fa fa-search" title="Detail"></button>
             </td>
         </tr>
         <tr>
@@ -59,7 +73,7 @@
                 <span class="badge badge-danger">DITOLAK</span>
             </td>
             <td>
-                <button class="btn btn-primary fa fa-search"></button>
+                <button class="btn btn-primary fa fa-search" title="Detail"></button>
             </td>
         </tr>
     </tbody>

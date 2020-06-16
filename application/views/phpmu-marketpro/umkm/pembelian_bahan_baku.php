@@ -1,21 +1,33 @@
-<div class="row mb-3">
-    <div class="col-2">
-        <label class="form-label mt-3">
-            Filter
-        </label>
-    </div>
-    <div class="col-6">
-        <select class="form-control">
-            <option>Semua</option>
-            <option>Hari ini</option>
-            <option>Minggu ini</option>
-            <option>Bulan ini</option>
-        </select>
-    </div>
-    <div class="col-4">
-        <button class="btn btn-primary fa fa-plus mt-3" title="Tambah"></button>
+<!--SUMMARY-->
+<div class="row m-3">
+    <div class="col-sm-12 text-right">
+        <span class="badge badge-primary">Bahan: 3</span>
+        <span class="badge badge-primary">Jumlah: 9</span>
     </div>
 </div>
+<!--SEACRHING-->
+<form>
+    <div class="row m-3">
+        <div class="col-sm-3">
+            <select class="form-control">
+                <option>Semua</option>
+                <option>Hari ini</option>
+                <option>Minggu ini</option>
+                <option>Bulan ini</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" placeholder="Bahan Baku"/>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
+        </div>
+    </div>
+</form>
+<!--DATA-->
 <table class="table">
     <thead>
         <tr>

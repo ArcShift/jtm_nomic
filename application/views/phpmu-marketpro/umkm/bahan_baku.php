@@ -1,4 +1,25 @@
+<!--SUMMARY-->
+<div class="row mt-3">
+    <div class="col-sm-12 text-right">
+        <span class="badge badge-primary">Produk: 2</span>
+    </div>
+</div>
+<!--SEACRHING-->
 <form>
+    <div class="row mt-3 mb-3">
+        <div class="col-sm-3">
+            <input class="form-control" placeholder="Produk"/>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
+        </div>
+    </div>
+</form>
+<!--<form>
     <div class="row">
         <label class="col-2 col-form-label">Nama Produk</label>
         <div class="col-10">
@@ -36,7 +57,16 @@
             </div>
         </div>
     </div>
-</form>
+</form>-->
+<!--DATA-->
+<?php
+$data = array(
+    array('produk' => 'Es Kopi Susu', 'bahan' => 'Gula', 'jumlah' => 7, 'satuan' => 'kg', 'harga' => 15000),
+    array('produk' => '', 'bahan' => 'Kopi', 'jumlah' => 10, 'satuan' => 'kg', 'harga' => 9000),
+    array('produk' => 'Es Kepal Milo', 'bahan' => 'Gula', 'jumlah' => 8, 'satuan' => 'kg', 'harga' => 15000),
+    array('produk' => '', 'bahan' => 'Susu', 'jumlah' => 15, 'satuan' => 'kg', 'harga' => 10000),
+);
+?>
 <table class="table mt-3">
     <thead>
         <tr>
@@ -48,47 +78,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Keset</td>
-            <td>Kain perca</td>
-            <td>0.8</td>
-            <td>kg</td>
-            <td>10.000</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Benang</td>
-            <td>0.1</td>
-            <td>kg</td>
-            <td>3.000</td>
-        </tr>
-        <tr>
-            <td>Clay Art</td>
-            <td>Tanah liat</td>
-            <td>0.3</td>
-            <td>kg</td>
-            <td>5.000</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Cat Warna</td>
-            <td>0.3</td>
-            <td>kg</td>
-            <td>5.000</td>
-        </tr>
-        <tr>
-            <td>Hand Sanitizer</td>
-            <td>Alkohol</td>
-            <td>50</td>
-            <td>ml</td>
-            <td>15.000</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Air</td>
-            <td>400</td>
-            <td>ml</td>
-            <td>1.000</td>
-        </tr>
+        <?php foreach ($data as $d) { ?>
+            <tr>
+                <td><?php echo $d['produk'] ?></td>
+                <td><?php echo $d['bahan'] ?></td>
+                <td><?php echo $d['jumlah'] ?></td>
+                <td><?php echo $d['satuan'] ?></td>
+                <td>Rp. <?php echo number_format($d['harga'], null, null, '.') ?></td>
+            </tr>   
+        <?php } ?>
     </tbody>
 </table>

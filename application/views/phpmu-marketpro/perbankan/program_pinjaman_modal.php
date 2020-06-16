@@ -1,17 +1,25 @@
+<!--SUMMARY-->
 <div class="row m-3">
-    <div class="col-4">
+    <div class="col-sm-12 text-right">
+        <span class="badge badge-primary">Program: 4</span> 
+    </div>
+</div>
+<!--SEACRHING-->
+<div class="row m-3">
+    <div class="col-2">
         <input class="form-control" placeholder="Nama Program"/>
     </div>
-    <div class="col-4">
+    <div class="col-2">
         <input class="form-control" placeholder="Limit"/>
     </div>
-    <div class="col-2">
-        <button class="m-3 btn btn-primary fa fa-plus" title="Tambah"></button>
+    <div class="col-8">
+        <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+        <button class="btn btn-primary mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
     </div>
 </div>
 <table class="table">
     <thead>
-        <tr class="">
+        <tr>
             <th>Program</th>
             <th>Limit</th>
             <th class="col-8">Keterangan</th>
