@@ -10,15 +10,17 @@ $menu = array(
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-<div class='col-12 notif ml-50 mt-3'>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <?php foreach ($menu as $m) { ?>
-            <li class="nav-item">
-                <a class="nav-link bg-success" href="<?php echo base_url('perbankan/' . $m['url']) ?>"><?php echo $m['title'] ?></a>
-            </li>
-        <?php } ?>
-    </ul>
-    <div class="tab-content col-11 bg-light">
+<div class="row notif ml-50 mt-3 mb-20 col-11">
+    <div class="col-3">
+        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+            <?php foreach ($menu as $m) { ?>
+                <li class="nav-item">
+                    <a class="nav-link bg-success" href="<?php echo base_url('perbankan/' . $m['url']) ?>"><?php echo $m['title'] ?></a>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+    <div class="tab-content col-9 bg-light">
         <?php $this->load->view('phpmu-marketpro/perbankan/' . $page) ?>
     </div>
 </div>

@@ -37,7 +37,7 @@
             </ul>
         </div>
         <div class="tab-content col-9 bg-light">
-            <?php $this->load->view('phpmu-marketpro/umkm/'.$page)?>
+            <?php $this->load->view('phpmu-marketpro/umkm/' . $page) ?>
         </div>
     </div>
 </div>
@@ -50,4 +50,7 @@
             $(n).addClass('active font-weight-bold');
         }
     }
+    $('.btn-add').click(function () {
+        $('.modal-add').modal('show');
+    });
 </script>

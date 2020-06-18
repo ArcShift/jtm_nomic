@@ -8,7 +8,7 @@
 <!--SEACRHING-->
 <form>
     <div class="row m-3">
-        
+
         <div class="col-sm-3">
             <input class="form-control" placeholder="Produk"/>
         </div>
@@ -17,7 +17,7 @@
         </div>
         <div class="col-sm-3"></div>
         <div class="col-sm-3">
-            <button class="btn btn-primary mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
+            <button type="button" class="btn btn-primary btn-add mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
         </div>
     </div>
 </form>
@@ -51,3 +51,36 @@ $data = array(
         <?php } ?>
     </tbody>
 </table>
+<!--MODAL-->
+<div class="modal modal-add" tabindex="-1" role="dialog">
+    <form>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Produk</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text" required=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Harga</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

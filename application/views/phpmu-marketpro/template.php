@@ -68,7 +68,6 @@
     })
     })
     </script>
-
     <style>
         .dataTables_wrapper .row{ width:100% }
         table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after{ display:none }
@@ -566,7 +565,7 @@
 
     <div id="back2top"><i class="pe-7s-angle-up"></i></div>
     <div class="ps-site-overlay"></div>
-    <div id="loader-wrapper">
+    <div id="-loader-wrapper">
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
@@ -845,6 +844,7 @@ for(var n of nav){
 if (e_com){
     $(nav[1]).addClass('text-danger font-weight-bold');
 }
+
 </script>
 </div>
 </body>
