@@ -10,7 +10,7 @@
     <div class="row m-3">
         <div class="col-sm-3">
             <select class="form-control">
-                <option>Semua</option>
+                <option>-- Periode --</option>
                 <option>Hari ini</option>
                 <option>Minggu ini</option>
                 <option>Bulan ini</option>
@@ -20,10 +20,10 @@
             <input class="form-control" placeholder="Bahan Baku"/>
         </div>
         <div class="col-sm-3">
-            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+            <button class="btn btn-primary mt-1 fa fa-search font-weight-bold" title="Cari"> Cari</button>
         </div>
         <div class="col-sm-3">
-            <button type="button" class="btn btn-primary btn-add mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
+            <button type="button" class="btn btn-primary btn-add mt-1 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
         </div>
     </div>
 </form>

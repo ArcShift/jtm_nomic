@@ -69,6 +69,10 @@
     })
     </script>
     <style>
+        .form-control{
+            height: 30px;
+        }
+        
         .dataTables_wrapper .row{ width:100% }
         table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after{ display:none }
         .dataTables_length select, .dataTables_filter input[type=search]{ height:30px }
@@ -335,7 +339,7 @@
                                         <li><a href="<?php echo base_url(); ?>members/penjualan">Orders Masuk</a></li>
                                         <li><a href="<?php echo base_url(); ?>members/withdraw">Tarik Dana</a></li>
                                         <?php if($this->session->umkm == 'Y'){ ?>
-                                            <li><a href="<?php echo base_url(); ?>members/kelola">Kelola UMKM</a></li>
+                                            <!--<li><a href="<?php // echo base_url(); ?>members/kelola">Kelola UMKM</a></li>-->
                                         <?php }else{ ?>
                                             <li><a href="<?php echo base_url(); ?>members/upgrade"><i class="fa fa-star text-yellow"></i> <span class="blink_me">Upgrade UMKM</span></a></li>
                                         <?php } ?>
@@ -833,18 +837,18 @@ s0.parentNode.insertBefore(s1,s0);
 <!--ADDICTIONAL SCRIPT-->
 <script>
 var nav= $('.navigation__extra').find('a');
+$(nav).addClass('font-weight-bold');
 var e_com= true;
 for(var n of nav){
     console.log($(n).attr('href').indexOf(window.location.href));
     if(window.location.href.indexOf($(n).attr('href'))>=0){
         e_com = false;
-        $(n).addClass('text-danger font-weight-bold');
+        $(n).addClass('text-danger');
     }
 }
 if (e_com){
     $(nav[1]).addClass('text-danger font-weight-bold');
 }
-
 </script>
 </div>
 </body>

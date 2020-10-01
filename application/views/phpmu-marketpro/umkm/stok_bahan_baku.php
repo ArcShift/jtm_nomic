@@ -9,19 +9,19 @@
 <!--SEACRHING-->
 <form>
     <div class="row m-3">
-        <div class="col-sm-3">
+        <div class="col-3">
             <select class="form-control">
-                <option>Semua</option>
+                <option>-- Periode --</option>
                 <option>Hari ini</option>
                 <option>Minggu ini</option>
                 <option>Bulan ini</option>
             </select>
         </div>
-        <div class="col-sm-3">
-            <input class="form-control" placeholder="Bahan Baku"/>
+        <div class="col-3 form-group">
+            <input class="form-control" placeholder="Bahan Baku" type="text"/>
         </div>
         <div class="col-sm-3">
-            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+            <button class="btn btn-primary mt-1 fa fa-search font-weight-bold" title="Cari"> Cari</button>
         </div>
         <div class="col-sm-3">
         </div>

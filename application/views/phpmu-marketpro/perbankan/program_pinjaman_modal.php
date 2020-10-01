@@ -6,15 +6,15 @@
 </div>
 <!--SEACRHING-->
 <div class="row m-3">
-    <div class="col-2">
+    <div class="col-3">
         <input class="form-control" placeholder="Nama Program"/>
     </div>
     <div class="col-2">
         <input class="form-control" placeholder="Limit"/>
     </div>
-    <div class="col-8">
-        <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
-        <button class="btn btn-primary mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
+    <div class="col-7">
+        <button class="btn btn-primary mt-1 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+        <button class="btn btn-primary mt-1 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
     </div>
 </div>
 <table class="table">

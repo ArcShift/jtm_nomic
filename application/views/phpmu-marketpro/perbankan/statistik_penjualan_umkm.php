@@ -7,14 +7,14 @@
 </div>
 <!--SEACRHING-->
 <div class="row m-3">
-    <div class="col-2">
+    <div class="col-3">
         <input class="form-control" placeholder="Nama UMKM"/>
     </div>
-    <div class="col-2">
+    <div class="col-3">
         <input class="form-control" type="date"/>
     </div>
-    <div class="col-8">
-        <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+    <div class="col-6">
+        <button class="btn btn-primary mt-1 fa fa-search font-weight-bold" title="Cari"> Cari</button>
     </div>
 </div>
 <!--CHART-->

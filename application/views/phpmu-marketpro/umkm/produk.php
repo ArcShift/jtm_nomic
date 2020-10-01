@@ -13,11 +13,11 @@
             <input class="form-control" placeholder="Produk"/>
         </div>
         <div class="col-sm-3">
-            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+            <button class="btn btn-primary mt-1 fa fa-search font-weight-bold" title="Cari"> Cari</button>
         </div>
         <div class="col-sm-3"></div>
         <div class="col-sm-3">
-            <button type="button" class="btn btn-primary btn-add mt-3 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
+            <button type="button" class="btn btn-primary btn-add mt-1 fa fa-plus pull-right font-weight-bold" title="Tambah"> Tambah</button>
         </div>
     </div>
 </form>

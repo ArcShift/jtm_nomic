@@ -59,4 +59,8 @@ class Umkm extends CI_Controller {
         $data['page'] = 'bursa_pinjaman_modal';
         $this->template->load(template() . '/template', template() . '/umkm/base', $data);
     }
+    function list_pengajuan_pinjaman() {
+        $data['page'] = 'list_pengajuan_pinjaman';
+        $this->template->load(template() . '/template', template() . '/umkm/base', $data);
+    }
 }

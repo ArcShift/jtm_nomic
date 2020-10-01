@@ -11,7 +11,7 @@
     <div class="row m-3">
         <div class="col-sm-3">
             <select class="form-control">
-                <option>Semua</option>
+                <option>-- Periode --</option>
                 <option>Hari ini</option>
                 <option>Minggu ini</option>
                 <option>Bulan ini</option>
@@ -21,7 +21,7 @@
             <input class="form-control" placeholder="Produk"/>
         </div>
         <div class="col-sm-3">
-            <button class="btn btn-primary mt-3 fa fa-search font-weight-bold" title="Cari"> Cari</button>
+            <button class="btn btn-primary mt-1 fa fa-search font-weight-bold" title="Cari"> Cari</button>
         </div>
     </div>
 </form>
